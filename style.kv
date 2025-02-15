@@ -1,0 +1,35 @@
+# #:kivy 
+
+<Style>:
+    MDScreenManager:
+        id:mn 
+#---------MAIN---------
+        MDScreen:
+            name:'main'
+            MDAnchorLayout:
+                anchor_x:'center'
+                anchor_y:'center' 
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    Camera:
+                        id:cam 
+                        resolution:[1000,800]
+                        play:False 
+                        size_hint:1.0,0.81 
+                    MDAnchorLayout:
+                        anchor_x:'center'
+                        anchor_y:'center'    
+                        MDRectangleFlatIconButton:
+                            id:start 
+                            icon:'android'
+                            text:'START'
+                            md_bg_color:'white' 
+                            line_color:'black' 
+                            text_color:'green' 
+                            icon_color:'pink' 
+                            # on_press:cam.play=True 
+                            on_press:root.click_start()   
+                            size_hint:0.2,0.11 
+#-------FAKE---------    
+        MDScreen:
+            name:'fake' 
